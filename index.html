@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiahOnFire Channel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">KiahOnFire</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+            <a href="about.html">About</a>
+          <a href="#">Discord</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Valheim<br><span></h1>
+        <p>A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by viking culture. Battle, build, and conquer your way to a saga worthy of Odin’s patronage!</p>
+        <a href="https://www.youtube.com/watch?v=qzEx1qDSsBs&list=PLBYph45MRFMUUkCgijuqhrXl7xYVYccdy">Want to see more Valheim?</a>
+      </div>
+      <div class="content">
+        <h1>Conan Exiles<br><span></h1>
+        <p>An online multiplayer survival game, now with mounts and mounted combat, set in the lands of Conan the Barbarian. Survive in a vast open world sandbox, build a home and kingdom, dominate your enemies in single or multiplayer.</p>
+        <a href="https://www.youtube.com/watch?v=vp8laiQbRG4&list=PLBYph45MRFMU7WbFtrzZkHe1YkVP4CREG">Want to see more Conan?</a>
+      </div>
+      <div class="content">
+        <h1>Destiny<br><span></h1>
+        <p>Dive into the world of Destiny 2 to explore the mysteries of the solar system and experience responsive first-person shooter combat. Unlock powerful elemental abilities and collect unique gear to customize your Guardian's look and playstyle. Enjoy Destiny 2’s cinematic story, challenging co-op missions, and a variety of PvP modes alone or with friends. Download for free today and write your legend in the stars</p>
+        <a href="https://www.youtube.com/watch?v=VJmuVmoIy7E&list=PLBYph45MRFMXoQYkLlj1qUDqxPzVGPTku">Want to see more Destiny?</a>
+      </div>
+      <div class="content">
+        <h1>Ark<br><span></h1>
+        <p>As a man or woman stranded naked, freezing and starving on the shores of a mysterious island called ARK, you must hunt, harvest resources, craft items, grow crops, research technologies, and build shelters to withstand the elements. Use your cunning and resources to kill or tame & breed the leviathan dinosaurs and other primeval creatures roaming the land, and team up with or prey on hundreds of other players to survive, dominate... and escape!</p>
+        <a href="https://www.youtube.com/watch?v=cpx0gr1rgwk&list=PLBYph45MRFMWbb6m0wNaTMlWtNuxx5ng1">Want to see more Ark?</a>
+      </div>
+      <div class="content">
+        <h1>GreenHell<br></h1>
+        <p>Green Hell is a sweltering struggle for survival in the Amazonian rainforest. Clinging to life, the player is set on a journey of durability as the effects of solitude wear heavy not only on the body but also the mind. How long can you survive against the dangers of the unknown?</p>
+        <a href="https://www.youtube.com/watch?v=ijs5Ez3kR18&list=PLBYph45MRFMVOc50YWcx8uwvk0X78KVCy">Want to see more GreenHell?</a>
+      </div>
+      <div class="media-icons">
+        <a href="https://twitter.com/Kiah0nFire"></a>
+
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
