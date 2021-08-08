@@ -271,6 +271,7 @@ section{
   }
 }
 
+/*About page style*/
 @media (max-width: 560px){
   .home .content h1{
     font-size: 3em;
